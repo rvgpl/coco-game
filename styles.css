@@ -1,0 +1,115 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: white;
+  background: #0f32b1;
+  font-family: 'Silkscreen', monospace;
+  height: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.world {
+  overflow: hidden;
+  position: relative;
+  background-image: url("imgs/world.png");
+  background-color: #0f32b1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.floor {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+.score {
+  position: absolute;
+  font-size: 15vmin;
+  right: 1vmin;
+  top: 1vmin;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.start-screen {
+  position: absolute;
+  font-size: 5vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.city {
+  --left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+  height: 100%;
+}
+
+.coco {
+  --bottom: 4;
+  position: absolute;
+  left: 1%;
+  height: 30%;
+  bottom: calc(var(--bottom) * 1%);
+  z-index: 1;
+}
+
+.lamp {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 30%;
+  bottom: 0px;
+}
+
+.start-screen h1 {
+  font-size: 24px;
+}
+.start-screen p {
+  margin: 0;
+  font-size: 12px;
+}
+.small-text {
+  margin: 0;
+  font-size: 16px;
+}
+footer {
+  font-size: 12px;
+  padding: 0 16px;
+  background-color: #000;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+@media (min-width: 798px) {
+  body {
+    align-items: flex-end;
+  }
+
+  .start-screen  h1 {
+    font-size: 56px;
+  }
+  .start-screen  p {
+    font-size: 16px;
+  }
+  
+}
